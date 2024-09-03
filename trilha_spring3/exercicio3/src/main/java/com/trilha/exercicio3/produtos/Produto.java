@@ -1,9 +1,6 @@
 package com.trilha.exercicio3.produtos;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Produto {
@@ -11,7 +8,11 @@ public class Produto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+
+	@Column
 	private String nome;
+
+	@Column
 	private double preco;
 	
 	public Produto() {
